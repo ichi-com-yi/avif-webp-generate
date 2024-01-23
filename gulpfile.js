@@ -4,8 +4,8 @@ const squoosh = require('gulp-libsquoosh');
 const rename = require('gulp-rename');
 
 // パスの設定
-const srcPath = { images: 'assets/images/**/*.+(jpg|jpeg|png)', };
-const destPath = { images: 'assets/images', };
+const srcPath = { images: 'images/**/*.+(jpg|jpeg|png)', };
+const destPath = { images: 'images', };
 
 // webp と avif への変換
 function imageConversion() {
