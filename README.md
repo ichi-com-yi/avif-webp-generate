@@ -44,7 +44,7 @@ npx gulp conversion
 処理を実行します。
 
 ```
-npx gulp conversion
+npx gulp watch
 ```
 imagesフォルダを監視。<br>
 追加されたら自動で処理が走ります。
