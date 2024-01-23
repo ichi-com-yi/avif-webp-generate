@@ -39,7 +39,7 @@ package.jsonで設定されている各パッケージをローカルにイン�
 
 ## 基本的なコマンド・スクリプト
 ```
-npx gulp conversion
+npx gulp generate
 ```
 処理を実行します。
 

@@ -8,7 +8,7 @@ const srcPath = { images: 'images/**/*.+(jpg|jpeg|png)', };
 const destPath = { images: 'images', };
 
 // webp と avif への変換
-function conversionTask() {
+function generateTask() {
   return src(srcPath.images)
   .pipe(rename((path) => {
     path.basename += path.extname;
@@ -30,9 +30,9 @@ function conversionTask() {
 
 // ファイルの監視
 function watchTask() {
-  watch(srcPath.images, conversionTask);
+  watch(srcPath.images, generateTask);
 }
 
 // タスクのエクスポート
-exports.conversion = conversionTask;
+exports.generate = generateTask;
 exports.watch = watchTask;
