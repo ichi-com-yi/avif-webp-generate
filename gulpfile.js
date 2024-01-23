@@ -33,5 +33,6 @@ function watchTask() {
   watch(srcPath.images, conversionTask);
 }
 
+// タスクのエクスポート
 exports.conversion = conversionTask;
 exports.watch = watchTask;
