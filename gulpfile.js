@@ -13,6 +13,8 @@ function conversionTask() {
   .pipe(rename((path) => {
     path.basename += path.extname;
   }))
+  // オプションの設定
+  // 使わないフォーマットは削除
   .pipe(squoosh({
     encodeOptions: {
       webp: {
