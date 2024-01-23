@@ -7,21 +7,17 @@ gulpを使ってavif と webp を生成します。
 ├── .editorconfig
 ├── .gitignore
 ├── README.md
-├── assets
-│   └── images
+├── images
 ├── gulpfile.js
 ├── package-lock.json
 └── package.json
 ```
-- `.editorconfig`  EditorConfigの設定ファイル
-- `.gitignore`     gitの除外ファイル
-- `README.md`      説明などを記載
-- `assets`         imagesファイルを格納するassetsファイル
-  - `images`       この中に該当する画像を格納する
-- `gulpfile.js`    gulpファイル
-- `package.json`   パッケージが記載されたファイル
-
-
+- `.editorconfig` EditorConfigの設定ファイル
+- `.gitignore`    gitの除外ファイル
+- `README.md`     説明などを記載
+- `images`        この中に該当する画像を格納する
+- `gulpfile.js`   gulpの設定ファイル
+- `package.json`  パッケージが記載されたファイル
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -43,8 +39,15 @@ package.jsonで設定されている各パッケージをローカルにイン�
 
 ## 基本的なコマンド・スクリプト
 ```
-npx gulp imageConversion
+npx gulp conversion
 ```
+処理を実行します。
+
+```
+npx gulp conversion
+```
+imagesフォルダを監視。<br>
+追加されたら自動で処理が走ります。
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 

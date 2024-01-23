@@ -1,5 +1,5 @@
 // パッケージの読み込み
-const gulp = require('gulp');
+const { src, dest, watch } = require('gulp');
 const squoosh = require('gulp-libsquoosh');
 const rename = require('gulp-rename');
 
@@ -8,8 +8,8 @@ const srcPath = { images: 'images/**/*.+(jpg|jpeg|png)', };
 const destPath = { images: 'images', };
 
 // webp と avif への変換
-function imageConversion() {
-  return gulp.src(srcPath.images)
+function conversionTask() {
+  return src(srcPath.images)
   .pipe(rename((path) => {
     path.basename += path.extname;
   }))
@@ -23,6 +23,13 @@ function imageConversion() {
       }
     }
   }))
-  .pipe(gulp.dest(destPath.images));
+  .pipe(dest(destPath.images));
 }
-exports.imageConversion = imageConversion;
+
+// ファイルの監視
+function watchTask() {
+  watch(srcPath.images, conversionTask);
+}
+
+exports.conversion = conversionTask;
+exports.watch = watchTask;
