@@ -3,5 +3,3 @@ node_modules/
 
 # package-lock.jsonを除外する
 package-lock.json
-
-2023/
